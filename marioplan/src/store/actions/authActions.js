@@ -38,7 +38,7 @@ export const signUp = newUser => {
       .then(res => {
         return firestore
           .collection("users")
-          .doc(res.newUser.uid)
+          .doc(res.user.uid)
           .set({
             firstName: newUser.firstName,
             lastName: newUser.lastName,

@@ -17,6 +17,8 @@ class CreateProject extends Component {
     e.preventDefault();
     // console.log(this.state);
     this.props.createProject(this.state);
+    // Redirects to HomePage
+    this.props.history.push("/");
   };
   render() {
     const { auth } = this.props;
