@@ -40,7 +40,7 @@ exports.userJoined = functions.auth.user().onCreate(user => {
       const newUser = doc.data();
       const notification = {
         content: "Joined the party",
-        usr: `${newUser.firstName} ${newUser.lastName}`,
+        user: `${newUser.firstName} ${newUser.lastName}`,
         time: admin.firestore.FieldValue.serverTimestamp()
       };
 
